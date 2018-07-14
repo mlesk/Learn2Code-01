@@ -13,6 +13,24 @@ const drawCircleOfCircles = (d, w, h) => {
 };
 
 //==============================================================================
+const drawSmallCircleOfCircles = (d, w, h) => {
+  d.noStroke();
+  for (var i = 0; i < 10; i++) {
+    d.ellipse(0, w / 4.5, w / 4.5, w / 4.5);
+    d.rotate(Math.PI / 5);
+  }
+};
+
+//==============================================================================
+const dots = (d, w, h) => {
+  d.noStroke();
+  for (var i = 0; i < 10; i++) {
+    d.ellipse(0, w / 4.5, w / 4.5, w / 4.5);
+    d.rotate(Math.PI / 1);
+  }
+};
+
+//==============================================================================
 const drawFlower = (d, w, h) => {
   const drawOutline = false;
   const drawFill = true;
@@ -33,6 +51,6 @@ const drawFlower = (d, w, h) => {
 rotatingShape({
   grid: 8,
   randomRotation: false,
-  drawShape: drawCircleOfCircles,
+  drawShape: drawSmallCircleOfCircles,
   suppressRotation: false,
 });
